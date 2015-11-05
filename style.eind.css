@@ -1,0 +1,936 @@
+html {
+    background: #FFFFFF;
+}
+
+body {
+    font-family: 'Open Sans';
+    font-size: 1em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin: 0;
+}
+
+body > * {
+    flex: 1 100%;
+}
+
+/*--------------------------------------------------------------*/
+
+nav a {
+    display: flex;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol > li {
+    transition: .3s;
+}
+
+ol > li:hover {
+    font-weight: bold;
+}
+
+nav > ul > li {
+    transition: .3s; /*het duurt 0,3 seconden voordat de tekst bold wordt*/
+}
+
+nav > ul > li:hover {
+    font-weight: bold; /*wanneer je over de nav heen 'hovert', wordt de tekst dikgedrukt*/
+}
+
+/*--------------------------------------------------------------*/
+
+.inleiding {
+    background-color: lightblue;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+/*--------------------------------------------------------------*/
+
+label {
+    display: block;
+}
+
+input {
+    width: 18em;
+    margin: 4px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+}
+
+input[type=submit] {
+    width: 100px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+
+label span {
+    width: 15em;
+    display: inline-block;
+}
+
+fieldset {
+    border-style: none;
+}
+
+
+/*--------------------------------------------------------------*/
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h4 {
+    font-family: 'Nunito', sans-serif;
+}
+
+/*-----------------afbeeldingen bij downloads-------------------*/
+
+li a[href*="bron.pdf"]:before {
+    content: url('images.form/bron.pdf');
+}
+
+li a[href*="bron.vcf"]:before {
+    content: url('images.form/bron.vcf');
+}
+
+li a[href*="bron.jpg"]:before {
+    content: url('images.form/bron.jpg');
+}
+
+/*-----------------------------js-------------------------------*/
+
+.hideFieldset {
+    display: none;
+}
+
+/*--------------------------------------------------------------*/
+
+p + a {
+    transition: .3s;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------*/
+
+.picture {
+    max-width: 95%;
+}
+
+/*--------------------------------------------------------------*/
+
+video {
+    width: 95%;
+    height: auto;
+}
+
+/*--------------------------------------------------------------*/
+
+
+/*Media queries, smartphone*/
+@media only screen and (max-width: 57em) {
+    nav {
+        overflow-y: hidden;
+        overflow-x: scroll;
+        width: 100%;
+        overflow-scrolling: touch;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        white-space: nowrap;
+    }
+
+    nav a {
+        padding-left: 1em;
+        padding-right: 1em;
+        justify-content: space-around;
+    }
+
+    a {
+        color: black;
+    }
+
+    .inleiding {
+        display: flex;
+        flex-direction: column;
+        height: 100%;f
+    }
+
+    .inleiding h1 {
+        display: none;
+    }
+
+    .inleiding p {
+        display: none;
+    }
+
+    header form {
+        order: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: .3em;
+    }
+
+    input[type=search] {
+        width: 7em;
+    }
+
+    .inleiding img {
+        order: 1;
+    }
+
+    .inleiding nav {
+        order: 3;
+    }
+
+    h1 {
+        line-height: 1.25em;
+    }
+
+    h2 {
+        line-height: 1.15384615em;
+    }
+
+    h3 {
+        line-height: 1.13636364em;
+    }
+
+    h4 {
+        line-height: 1.11111111em;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25em;
+        margin: 0;
+    }
+
+    .logo {
+        width: 40%;
+        float: left;
+    }
+
+    .beroep {
+        float: left;
+        width: 70%;
+        padding-right: .5em;
+    }
+
+    main {
+        background-color: #FFE993;
+        margin: 0;
+        padding: .5em;
+    }
+
+    main article {
+        max-width: 42em;
+        margin: 0 auto;
+    }
+
+    aside {
+        background-color: #F2F2F3;
+        margin: 0;
+        padding: .5em;
+    }
+
+    aside section {
+        max-width: 42em;
+        margin: 0 auto;
+    }
+
+    .related {
+        display: none;
+    }
+
+    .meer {
+        display: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer section {
+        max-width: 42em;
+        margin: 0 auto;
+    }
+
+    #search {
+        order: 1;
+    }
+
+    #contact {
+        order: 2;
+    }
+
+    #about {
+        order: 3;
+    }
+
+    #credits {
+        order: 4;
+    }
+
+    #feedback {
+        order: 5;
+    }
+
+    #sitemap {
+        display: none;
+    }
+
+    .footer {
+        background-color: lightblue;
+        padding: .7em;
+    }
+}
+
+/*--------------------------------------------------------------*/
+
+/*tablet*/
+@media only screen and (min-width: 57em) and (max-width: 76em) {
+    nav ul {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li {
+        justify-content: space-around;
+    }
+
+    a {
+        color: black;
+    }
+
+    nav a {
+        border: 1px solid black;
+        margin: .8em;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        border-radius: .2em;
+        padding: .5em;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header form {
+        display: flex;
+        order: 1;
+        align-self: flex-end;
+    }
+
+    .inleiding h1 {
+        order: 2;
+        margin: 0 auto;
+        padding-top: .5em;
+        padding-bottom: .3em;
+    }
+
+    .inleiding p {
+        order: 3;
+        margin: 0 auto;
+        padding-bottom: 1em;
+    }
+
+    .inleiding img {
+        order: 4;
+        padding-left: 3em;
+    }
+
+    .inleiding nav {
+        order: 5;
+    }
+
+    .inleiding {
+        padding-bottom: 1em;
+    }
+
+    .logo {
+        width: 50%;
+        margin-bottom: .2em;
+    }
+
+    body {
+        line-height: 1.375em;
+    }
+
+    .beroep {
+        float: left;
+        width: 70%;
+        padding-bottom: .5em;
+        padding-right: .5em;
+    }
+
+    picture {
+        max-width: 32em;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column;
+        order: 1;
+        max-width: 34em;
+        margin: 0;
+        padding: 1em;
+        background-color: #FFE993;
+    }
+
+    aside {
+        display: flex;
+        flex-flow: column;
+        order: 2;
+        flex: 2 0px;
+        margin: 0;
+        padding: 1em;
+        background-color: #F2F2F3;
+    }
+
+    /*related projects, form*/
+     .related {
+         display: flex;
+         flex-flow: wrap;
+         order: 3;
+         background-color: #EFBF02;
+         margin: 0;
+         padding: 1em;
+     }
+
+    .related article {
+        display: flex;
+        flex-direction: row;
+        margin: 1em;
+        width: 40em;
+        padding: .5em;
+    }
+
+    .related article section {
+        padding-left: .8em;
+        padding-right: .8em;
+    }
+
+    .related article header {
+        padding-right: .8em;
+    }
+
+    .related h2 {
+        margin-right: 25em;
+        padding-top: .5em;
+        padding-left: 1em;
+    }
+
+    .related p:first-of-type {
+        width: 11em;
+    }
+
+    /*meer lezen, artikelen*/
+    .meer {
+        display: flex;
+        flex-flow: wrap;
+        order: 3;
+        background-color: #EFBF02;
+        margin: 0;
+        padding: 1em;
+    }
+
+    .meer article {
+        margin: 1em;
+        max-width: 13em;
+        padding-left: .8em;
+        padding-right: .8em;
+    }
+
+    .meer h2 {
+        margin-right: 30em;
+        padding-top: .5em;
+        padding-left: 1em;
+    }
+
+    .footer {
+         display: flex;
+         flex-direction: column;
+         order: 4;
+         padding-left: 5em;
+         padding-right: 5em;
+         background-color: lightblue;
+         text-align: center;
+     }
+
+     #contact {
+         order: 3;
+     }
+
+     #about {
+         order: 2;
+     }
+
+     #credits {
+         order: 4;
+     }
+
+     #feedback {
+         display: flex;
+         flex-direction: column;
+         order: 5;
+     }
+
+     #search {
+         order: 1;
+     }
+
+    #sitemap {
+        display: none;
+    }
+}
+
+/*--------------------------------------------------------------*/
+
+/*desktop, laptop*/
+ @media only screen and (min-width: 76em) {
+    nav {
+        width: 100%;
+    }
+
+    nav a {
+        border: 1px solid black;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+        margin-top: 1em;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        border-radius: .2em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    nav ul {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav > ul > li {
+        justify-content: space-around;
+    }
+
+    a {
+        color: black;
+    }
+
+
+    .inleiding {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inleiding form {
+        display: flex;
+        order: 1;
+        align-self: flex-end;
+    }
+
+   .inleiding h1 {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .inleiding p {
+        order: 3;
+        margin: 0 auto;
+    }
+
+    .inleiding img {
+        order: 4;
+        padding-left: 3em;
+    }
+
+    .inleiding nav {
+        order: 5;
+    }
+
+    .inleiding {
+        padding-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    main h1:first-of-type {
+        font-size: 1.75em;
+        line-height: 1.25em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+        line-height: 1.25em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.25em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+        line-height: 1.22222222em;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .beroep {
+        float: left;
+        width: 90%;
+        max-width: 30em;
+        padding-bottom: .5em;
+        padding-right: 1em;
+    }
+
+    body {
+        line-height: 1.375em;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column;
+        order: 2;
+        flex: 2 0px;
+        margin: 0;
+        background-color: #FFE993;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+
+    main article {
+        max-width: 42em;
+        margin: 0 auto;
+    }
+
+
+    aside {
+        order: 1;
+        max-width: 25em;
+        margin: 0;
+        padding: 1em;
+        background-color: #F2F2F3;
+    }
+
+     .related {
+         display: flex;
+         flex-direction: column;
+         order: 3;
+         flex: 2 0px;
+         max-width: 30em;
+         margin: 0;
+         background-color: #EFBF02;
+         padding: 1em;
+
+     }
+
+     .meer {
+         display: flex;
+         flex-direction: column;
+         order: 3;
+         flex: 2 0px;
+         max-width: 30em;
+         margin: 0;
+         background-color: #EFBF02;
+         padding: 1em;
+     }
+
+     .footer {
+         display: flex;
+         flex-direction: row;
+         order: 4;
+         padding-left: 1em;
+         padding-right: 1em;
+         margin: 0;
+         text-align: center;
+         background-color: lightblue;
+     }
+
+     .footer h2 {
+         font-size: 1.75em;
+     }
+
+     .footer section {
+         margin-left: 1em;
+         margin-right: 1em;
+     }
+
+     #contact {
+         order: 2;
+     }
+
+     #about {
+         order: 3;
+         max-width: 40em;
+     }
+
+     #credits {
+         order: 5;
+     }
+
+     #feedback {
+         order: 6;
+     }
+
+     #search {
+         order: 1;
+     }
+
+     #sitemap {
+         order: 4;
+     }
+
+ }
+
+/*--------------------------------------------------------------*/
+
+/*Bij uitzoomen*/
+ @media only screen and (min-width: 120em) {
+    nav {
+        width: 100%;
+    }
+
+    nav a {
+        border: 1px solid black;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+        margin-top: 1em;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        border-radius: .2em;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    nav ul {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav > ul > li {
+        justify-content: space-around;
+    }
+
+    a {
+        color: black;
+    }
+
+
+    .inleiding {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inleiding form {
+        display: flex;
+        order: 1;
+        align-self: flex-end;
+    }
+
+   .inleiding h1 {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .inleiding p {
+        order: 3;
+        margin: 0 auto;
+    }
+
+    .inleiding img {
+        order: 4;
+        padding-left: 3em;
+    }
+
+    .inleiding nav {
+        order: 5;
+    }
+
+    .inleiding {
+        padding-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    main h1:first-of-type {
+        font-size: 1.75em;
+        line-height: 1.25em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+        line-height: 1.25em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.25em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+        line-height: 1.22222222em;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .beroep {
+        float: left;
+        width: 90%;
+        max-width: 30em;
+        padding-bottom: .5em;
+        padding-right: 1em;
+    }
+
+    body {
+        line-height: 1.375em;
+        max-width: 120em;
+        margin: 0 auto;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column;
+        order: 2;
+        flex: 2 0px;
+        margin: 0;
+        background-color: #FFE993;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+
+    main article {
+        max-width: 42em;
+        margin: 0 auto;
+    }
+
+
+    aside {
+        order: 1;
+        max-width: 25em;
+        margin: 0;
+        padding: 1em;
+        background-color: #F2F2F3;
+    }
+
+     .related {
+         display: flex;
+         flex-direction: column;
+         order: 3;
+         flex: 2 0px;
+         max-width: 30em;
+         margin: 0;
+         background-color: #EFBF02;
+         padding: 1em;
+
+     }
+
+     .meer {
+         display: flex;
+         flex-direction: column;
+         order: 3;
+         flex: 2 0px;
+         max-width: 30em;
+         margin: 0;
+         background-color: #EFBF02;
+         padding: 1em;
+     }
+
+     .footer {
+         display: flex;
+         flex-direction: row;
+         order: 4;
+         padding-left: 1em;
+         padding-right: 1em;
+         margin: 0;
+         text-align: center;
+         background-color: lightblue;
+     }
+
+     .footer h2 {
+         font-size: 1.75em;
+     }
+
+     .footer section {
+         margin-left: 1em;
+         margin-right: 1em;
+     }
+
+     #contact {
+         order: 2;
+     }
+
+     #about {
+         order: 3;
+         max-width: 40em;
+     }
+
+     #credits {
+         order: 5;
+     }
+
+     #feedback {
+         order: 6;
+     }
+
+     #search {
+         order: 1;
+     }
+
+     #sitemap {
+         order: 4;
+     }
+
+ }
+
